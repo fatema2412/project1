@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .logo{
+        display: flex;
+  justify-content: center; 
+  }
+ .search{
+    display: flex;
+    align-items: center;
+    background: white; /* Optional: for visibility */
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    right: 250px; /* Adjust as needed */
+    /* z-index: 1000; */
+
+ }
+ #search-bar::placeholder {
+    color: #888; /* Placeholder text color */
+    font-style: italic;
+}
+.login{
+    position: fixed;
+    top: 30px; /* Adjust as needed */
+    right: 150px; 
+    height: 18px;
+    width: 3%;
+    /* z-index: 1000; */
+}
+.login>img{
+    height: 100%;
+    width: 100%;
+}
+.bag{
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    right: 40px; 
+    height: 32px;
+    width: 4%;
+    /* border: 1px solid black; */
+    z-index: 1000;
+
+}
+.bag>img{
+    height: 100%;
+    width: 100%;
+
+
+}
+.whishlist{
+    position: fixed;
+    top: 28px; /* Adjust as needed */
+    right: 110px; 
+    height: 18px;
+    width: 2%;
+    /* border: 1px solid black; */
+}
+.whishlist>img{
+    height: 100%;
+    width: 100%;
+
+}
+#navbar{
+    display: flex;
+    flex-direction: row;
+   padding: 20px;
+   align-items: flex-start;
+   background-color: white;
+   justify-content: space-between;
+   margin-left: 60px;
+   margin-right: 60px;
+     width: 90%;
+}
+
+#navbar a {
+    text-decoration: none; /* Remove underline */
+    color:#000(115, 119, 123); /* Text color */
+    font-weight: lighter;
+    font-size: 15px; /* Font size */
+    display: block; /* Ensure the link covers the entire h3 element */
+}
+
+#navbar a:hover {
+    color: #007bff; /* Color on hover (optional) */
+}
+.clear{
+    display: flex;
+  justify-content: center;
+  color :rgb(205, 37, 37);
+  margin-top: -1%;
+  font-size: 15px;
+}
+#scrolling-bar{
+    background-color: #000;
+    color: whitesmoke;
+    display: block;
+    height: 35px;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: center;
+     display: flex; align-items: center;
+     margin-top: 3%;
+}
+ #scrolling-bar span{
+    justify-content: center;
+    display: flex;
+}
+.mutlipc{
+
+    width: 100%;
+    height: 500px;
+    /* margin-top: 15%; */
+    /* margin-left: 15%; */
+    margin-bottom: 5%;
+   /* position: absolute; */
+   /* transform: translate(-50%,-50%); */
+   background-image: url("https://images.pexels.com/photos/994234/pexels-photo-994234.jpeg?cs=srgb&dl=pexels-olly-994234.jpg&fm=jpg");
+   background-size: 100% 100%;
+   animation: slider 20s infinite linear;
+   cursor: pointer;
+   
+   
+}
+@keyframes slider  {
+    0%{  background-image: url("https://media.istockphoto.com/id/854321536/photo/look-at-this-gorgeous-dress.jpg?s=612x612&w=0&k=20&c=UyxEiEddYEFQPAoopwYs-_8xJ5vp0vKE0Sl3GnrQpK8=");}
+    35%{ background-image: url("https://media.istockphoto.com/id/1255226674/photo/happy-trendy-female-shopper-in-sunglasses-with-shopping-bags.jpg?s=612x612&w=0&k=20&c=gy6wN4rEX47mzZLLQ03qRv55Ge5hRSAdwGjVUBMqbWU=");}
+    75%{ background-image: url("https://www.shutterstock.com/image-photo/stylish-watch-on-woman-hand-260nw-1344280394.jpg");}
+    
+}
+ 
+#main{
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4,300px);
+    gap:45px;
+    margin-top: 1%;
+    padding-left:50px;
+}
+     .rec{
+  font-size: 35px;
+  font-weight: lighter;
+  /* border: 1px solid black; */
+  justify-content: center;
+  display: flex;
+  letter-spacing: .025em;
+  
+
+}
+.horizontal-line {
+    width: 100%; /* Full width */
+    height: 1px; /* Thickness of the horizontal line */
+    background-color: rgb(199, 198, 198); /* Line color */
+    margin-top: 4%;
+}
+ 
+ #items{
+    height: 380px;
+    width: 240px;
+    /* margin-left: 7%; */
+    overflow: hidden;
+    text-decoration: none;
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
+
+}
+#itemsimg{
+    /* border: 1px solid black; */
+    height: 60%;
+    overflow: hidden;
+   
+}
+#itemsimg img {
+            width: 100% ;
+            height: 100%; 
+        }
+        .itemsdetails {
+            /* margin-left: 0.5; */
+            font-size: 15px;
+            font-family: Futura,sans-serif;
+            color: #888; /* Placeholder text color */
+            letter-spacing: .025em;
+            line-height: 1.6;
+            /* text-align: center; */
+
+        }
+        #main>items>para {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: gray;
+            margin-right: 10px;
+        }
+        .discounted-price {
+            font-weight: bold;
+            margin-right: 10px;
+            color: black;
+        }
+        .savings {
+            color: red;
+            font-weight: bold;
+        }
+         #header{
+            width: 100%;
+        position: sticky;
+    top: 0;
+    width: 100%;
+    background: #fff; /* Background color to ensure it stands out */
+    z-index: 1000; /* Ensure it stays on top of other content */}
+ #sbc{
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4,200px);
+    grid-template-rows: repeat(2,200px);
+    gap:45px;
+    margin-top: 1%;
+    padding-left:70px;
+    margin-top: 4%;
+ }
+
+ .itemsprice {
+    text-align: center;
+    color: #000;
+    font-size: 20px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    font-weight: lighter;
+ }
+ .sbcitem{
+    height: 480px;
+    width: 240px;
+ }
+ .sbcimg{
+    /* border: 1px solid black; */
+    height: 40%;
+    overflow: hidden;
+}
+.slide {
+  display: flex;
+  /* justify-content: space-between; */
+  /* flex-wrap: wrap; */
+  grid-template-columns: repeat(4,200px);
+  gap:20px;
+    margin-top: 1%;
+    padding-left:20px;
+   /* border: 1px solid  black; */
+
+   /* Adjust alignment as needed */
+}
+
+.image-container {
+  text-align: center; /* Center align image and text */
+  /* border: 1px solid black; */
+  height: 480px;
+    width: 280px;
+
+}
+
+.image-container img {
+  /* width: 100%; */
+  height: 60%; 
+  overflow: hidden;
+
+}
+
+
+.images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+.prevButton {
+  right:100px;
+  /* left: 20px; */
+}
+
+.nextButton {
+  right: 50px;
+}
+ .desc{
+    text-transform:uppercase;
+    font-size: 20px;
+    letter-spacing: .2em;
+    color: #000;
+    text-align: center;
+    font-weight: lighter;
+ }
+ .prevButton,.nextButton{
+    position: absolute;
+    top: 400%;
+    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.price-line {
+    border: none; /* Remove default border */
+    height: 1px; /* Thickness of the line */
+    background-color: #333; /* Color of the line */
+    margin: 10px 0; /* Space around the line */
+    width: 100%; /* Full width of the container */
+}
+.threeimg {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    /* border: 1px solid black; */
+    margin-top: 10%;
+    gap: 20px;
+    margin-left: 2%;
+    /* height: 500px; */
+
+}
+.imgone{
+    position: relative;
+    /* width: 300px; */
+    /* height: 500px; */
+}
+.imgone>img{
+    height: 530px;
+    width: 470px;
+}
+.image-heading, .image-headingoff, .image-headingdes {
+    position: absolute;
+    top: 23%; /* Adjust as needed to center vertically */
+    left: 45%; 
+       transform: translate(-50% );
+    /* background-color: rgba(0, 0, 0, 0.7); Semi-transparent background */
+    color: #fff; /* Text color */
+    padding: 10px;
+    /* font-size: 40px;  */
+    color: #fff;
+    width: 80%;
+    white-space: nowrap;
+    letter-spacing:.1em ;
+    text-align: center;
+}
+.image-heading {
+    font-size: 25px; /* Larger font size for main heading */
+    /* top: 30%; */
+}
+
+.image-headingoff {
+    font-size: 40px;
+    font-style: bold;
+}
+
+.image-headingdes {
+    font-size: 20px;
+    font-style: bold; 
+}
+#imgbutton{
+    position: absolute;
+    bottom: 50px; /* Position button 20px from bottom */
+    left: 45%; 
+    transform: translateX(-50%); /* Center align horizontally */
+    font-size: 1.2rem; /* Font size for button text */
+    padding: 10px; /* Padding around button text */
+    background-color: #333; /* Button background color */
+    color: #ffffff7d; /* Button text color */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Pointer cursor on hover */
+    white-space: nowrap;
+    /* top: 10%; */}
+ .lastimg{
+    height: 600px;
+    /* border: 1px solid rebeccapurple; */
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-left: 2%;
+
+ }
+ .lasthead{
+    height: 420px;
+    width: 430px;
+ }
+ .lasthead>img{
+    height: 100%;
+    width: 100%;
+ }
+ .lasthead>h2{
+    /* margin-top:-0.1%; */
+    font-size: 27px;
+    /* letter-spacing:.1em ; */
+    /* line-height: 1.6; */
+    text-align: center;
+    text-transform:uppercase }
+    .lasthead>h5{
+        font-size:18px;
+        font-family: Futura,sans-serif;
+        letter-spacing: .025em;
+        /* line-height: 1.6; */
+        font-weight: lighter;
+        margin-top: -0.2%;
+        /* white-space: nowrap; */
+        }
+        .button-container {
+    text-align: center;  /* Centers content inside the container */
+}
+
+.my-button {
+    background-color: white;
+    color: rgb(26, 25, 25);
+    border: 0.5px solid black;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: lighter;
+    margin-top: -2%;
+    letter-spacing: .025em;}
+    #aboutus{
+  background-color:rgb(240, 240, 240);
+  height: 700px; 
+  width: 1500px;
+  margin-top: 8%;
+  /* color: #000; */
+  padding-left: 3%; 
+  
+    }
+    .about{
+     padding-top: 4%;
+     /* text-decoration: underline; */
+     font-size: 20px;
+     font-weight: 500;
+     color:#000;
+     font-family:Futura,sans-serif ;
+    }
+    .box1{
+        white-space: nowrap;
+        font-size: 15px;
+        font-weight: 500;
+        font-family: Futura,sans-serif;
+        letter-spacing: 0.2em;
+        /* margin-top: -1%; */
+        color: #000;
+    }
+    .about-link {
+    text-decoration: none; /* No underline for the link */
+}
+.box-container {
+    display: flex;
+    gap: 40px; /* Space between boxes */
+}
+.signup{
+    font-size: 20px;
+     font-weight: 500;
+     color:#000;
+     font-family:Futura,sans-serif ;
+     margin-left: 55%;
+     margin-top: -17%;
+}
+.sub{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    width: 400px;
+    margin-top: 2%;}
+    #ins{
+        height: 30px;
+        margin-top: 5%;
+    }
+     #fb{
+        height: 30px;
+        /* margin-top:-0.5%; */
+        margin-left: 3%;
+
+     }
+     .lastlog>img{
+        /* text-align:  center; */
+        height: 150px;
+        margin-top: 20%;
+        margin-left: 35%;
+     }   
+     .lastlog>p{
+        margin-left: 25%;
+        /* font-size: 25px; */
+     }
+</style>
+<body>
+   <div id =header> 
+    <div class="logo">
+        <img alt="logo bluefly" src="https://www.bluefly.com/cdn/shop/files/BLUEFLY-LOGO-11-20.png?v=1613183141">
+    </div>
+    <div class="search">
+        <input type="text" id="search-bar" placeholder="Search for clothing...">
+</div>
+<div class="login">
+ <img alt="login" src="https://cdn-icons-png.flaticon.com/128/2321/2321232.png">
+</div>
+<div class="whishlist">
+    <img alt="whishlist" src="https://static-00.iconduck.com/assets.00/wishlist-icon-2048x1952-13b2gake.png">
+</div>
+<div class="bag">
+
+<img alt="shopping bag" src="https://cdn-icons-png.flaticon.com/128/2567/2567829.png">
+</div>
+<div id="navbar">
+ <h3><a href="">CLOTHING </a></h3>
+ <h3><a href="">SHOES </a></h3>
+ <h3><a href="">HANDBAGS </a></h3>
+ <h3><a href="">DESNIGER </a></h3>
+ <h3><a href="">SUNGLASSES </a></h3>
+ <h3><a href="">JEWELRY & WATCHES</a></h3>
+ <h3><a href="">UNDER $ 500</a></h3>
+ <h3><a href="">HOME </a></h3>
+</div>
+<h3 class="clear">CLEARANCE</h3>
+ </div> 
+<div id="scrolling-bar">
+        <span>WELCOME TO BLUEFLY: Luxury brands at discount price</span>
+
+</div>
+<img style="width: 100%";src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/Top_banner_asset_1200X200_ca56302f-fe7
+7-4c56-aa8d-6f7ad2580832.jpg?v=1721945318">
+<div class="mutlipc"></div> 
+<h2 class="rec" style="margin-top: -2%">RECOMMENDED PRODUCTS</h2>
+<div id="main"></div>
+<div class="horizontal-line"></div>
+<h2 class="rec">SHOP BY CATEGORY</h2>
+<div id="sbc"></div>
+<div class="mutlipc"></div> 
+<h2 class="rec" style="margin-top:-3%;">NEW ARRIVAL</h2>
+<div class="slide">
+    <div class="image-container">
+      <img src="https://www.bluefly.com/cdn/shop/files/B2DsEM0Z4isnrNuDMnfMy8Pboxx4Decx-25_360x.jpg?v=1721431552" alt="Image 1">
+      <h5 class = "desc">Womens Strappy Dressy Pumps</h5>
+      <p class="price-details" style="font-size: 20px;"><span class="original-price">$675.00</span>
+        <span class="discounted-price">$279.99</span>
+    <span class="savings">Save 59%</span></p>
+    <hr class="price-line">
+
+ </div>
+    <div class="image-container">
+        <img src="https://www.bluefly.com/cdn/shop/files/1411016729_RLLZ_1_360x.jpg?v=1721958854" alt="Image 2">
+        <h5  class = "desc">Mac Duggal Cocktail Dress</h5>
+        <p class="price-details" style="font-size: 20px;"><span class="original-price">$675.00</span>
+            <span class="discounted-price">$279.99</span>
+        <span class="savings">Save 59%</span></p>
+        <hr class="price-line">
+
+     </div>
+      <div class="image-container">
+        <img src="https://www.bluefly.com/cdn/shop/files/213933-760943__20058__2_360x.jpg?v=1721953249" alt="Image 3">
+        <h5   class = "desc">Ferragamo Womens Gemini Crossbody Bag</h5>
+        <p class="price-details" style="font-size: 20px;"><span class="original-price">$675.00</span>
+            <span class="discounted-price">$279.99</span>
+        <span class="savings">Save 59%</span></p>
+        <hr class="price-line">
+
+     </div>
+      <div class="image-container">
+        <img src="https://www.bluefly.com/cdn/shop/files/30321S033001_1_360x.jpg?v=1721613785" alt="Image 3">
+        <h5  class = "desc"> Alexander Wang Womens Black Mule </h5>
+        <p class="price-details" style="font-size: 20px;"><span class="original-price">$675.00</span>
+            <span class="discounted-price">$279.99</span>
+        <span class="savings">Save 59%</span></p>
+        <hr class="price-line">
+
+    </div>
+      <div class="image-container">
+        <img src="https://www.bluefly.com/cdn/shop/files/1313679063_RLLZ_1_360x.jpg?v=1721860375" alt="Image 3">
+        <h5 class="desc">Christian Louboutin Condora 85 Leather Pump </h5>
+        <p class="price-details" style="font-size: 20px;" ><span class="original-price">$675.00</span>
+            <span class="discounted-price">$279.99</span>
+        <span class="savings">Save 59%</span></p>
+        <hr class="price-line">
+
+    </div>
+</div>
+    <button class="prevButton"><</button>
+    <button class="nextButton">></button>
+  <div class="threeimg">
+    <div class="imgone">
+    <img src="https://i.pinimg.com/736x/23/b2/2c/23b22c170c49696cb5c37cf9f6307887.jpg" alt="image1 of sencond last image">
+    <h3 class="image-heading"> DESIGNER BOUTIQUE</h3>
+   <h3 class="image-headingoff" style="top: 28%;"> UP TO 80% OFF </h3> 
+  <h3 class="image-headingdes" style="top: 47%; white-space: wrap;"> Featured Designer : Burberry Saint Laurent,Gucci,Bottega Veneta,Ferragamo,& More </h3>
+   <button id="imgbutton">SHOP DESIGNER BOUTIQUE</button>
+
+  </div>
+  <div class="imgone">
+    <img src="https://www.shutterstock.com/image-photo/fashion-woman-white-flying-dress-600nw-2316044439.jpg" alt="image1 of sencond last image">
+    <h3 class="image-heading" style="left: 50%;">  TRENDING LUXURY STYLE </h3>
+   <h3 class="image-headingoff" style="top: 28%;left: 50%;"> UP TO 84% OFF </h3> 
+  <h3 class="image-headingdes" style="top: 47%; white-space: wrap;">Best-Selling Styles from: Gucci,Valentio,Balenciaga,Sturat Weitzman & More </h3>
+   <button id="imgbutton">SHOP LUXURY STYLES</button>
+  </div>
+  <div class="imgone">
+    <img src="https://i.pinimg.com/736x/6b/57/03/6b570358970d942515630822e19b628b.jpg" alt="image1 of sencond last image">
+    <h3 class="image-heading" > ON TREND DRESSES </h3>
+   <h3 class="image-headingoff" style="top: 28%;"> UP TO 65% OFF </h3> 
+  <h3 class="image-headingdes" style="top: 45%; white-space: wrap;"> Featuring  Adrianna Papell, Lauren Raplph Lauren & More</h3>
+   <button id="imgbutton">SHOP DRESSES</button>
+  </div>
+  </div>
+  <div class="lastimg">
+    <div class="lasthead">
+    <img src="https://www.bluefly.com/cdn/shop/files/denim_540x.jpg?v=1615204984" alt=" jeans img">
+    <h2>UP TO 85% OFF THE DENIM SHOP FOR HIM & HER</h2>
+    <h5>From Hudson Jeans, Joe's Jeans, J Brand & More</h5>
+    <div class="button-container">
+        <button class="my-button">SHOP WOMEN'S ACCESSORIES</button>
+    </div>
+    
+</div>
+<div class="lasthead" >
+ <img style="margin-left: 12%; width:80%"; src="https://www.bluefly.com/cdn/shop/files/shutterstock_1112754335-REV_360x.jpg?v=1656342184" alt="jumpsuit">
+ <h2>Up to 90% off trending JUMPSUITS & ROMPERS</h2>
+ <h5>Must-Haves From Halston, BCBGMAXAZRIA, Iro & More</h5>
+ <div class="button-container">
+    <button class="my-button">SHOP JUMPSUITS</button>
+</div>
+  </div>
+  <div class="lasthead">
+  <img  style="width: 90%;margin-left: 6%;" src="https://www.bluefly.com/cdn/shop/files/Tops_360x.jpg?v=1615206654" alt="3rdimg">
+  <h2>UP TO 90% off Women's Must-have accessories</h2>
+  <h5>Shop Wallets, Belts, Hats, Sunglasses & More</h5>
+  <div class="button-container">
+    <button class="my-button">SHOP WOMEN'S ACCESSORIES</button>
+</div>
+
+</div>
+  </div>
+    <div id="aboutus">
+        <a href="projectbag.html"  class="about-link">
+  <h5  class="about">About US</h5> 
+</a>
+  <div class="box-container">
+
+   <div class="box1">
+    <p>Contact Us</p> 
+    <p>Frequently Asked Questions </p>
+    <p>Shipping & Return</p>
+    <p>Pre-Owned Guide</p>
+    <p>Sell on Bluefly</p>
+</div>
+<div class="box1">
+    <p>Privacy Policy</p>
+    <p>Terms & Conditions </p>
+    <p> Do not sell my personal Information </p>
+    <p>Shop Pay Installments</p>
+</div>
+<div class="box1">
+    <p>Subscribe to get exclusive offers on designer brands</p>
+    <input style="width: 400px; height: 40px; text-align: center; font-size: 20px;" placeholder="Enter your email"><br>
+    <button class="sub">Subscribe</button> <br>
+    <span> <img id="ins" src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png"></span> 
+    <span> <img id="fb" src="https://cdn-icons-png.flaticon.com/128/1384/1384005.png"></span>
+
+  </div>
+  </div>
+  <h5  class="signup">SIGN UP AND SAVE</h5>
+
+
+<div class="lastlog">
+    <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/Untitled_2_.png_5_x104@2x.png?v=1620852820" alt="logo">
+   <p>© 2022 Bluefly 1998-2020 BLUEFLY.COM OR ITS AFFILIATES ALL RIGHTS RESERVED.</p>  
+ </div>
+    </div>
+</body>
+<script>
+    var data=[{
+        pic:"https://www.bluefly.com/cdn/shop/files/1160877948_RLLZ_1_1800x1800.jpg?v=1721844092",
+   name:"VALENTINO BY MARIO  MONOGRAM LEATHER SHOULDER BAG",
+   price:"$675.00 $279.99 Save 59%",
+    },
+    {
+      pic:"https://t4.ftcdn.net/jpg/01/10/04/51/360_F_110045173_QgmA3gg5OwTlLNQBqmPdFnkh6sPvsvt8.jpg",
+    name:"Valentino By Mario Valentino Beatriz Diamond Leather Shoulder Bag",
+    price:"$895.00 $319.99 Save 64% "
+    },
+    {
+    pic:"https://media.istockphoto.com/id/1271796113/photo/women-is-holding-handbag-near-luxury-car.jpg?s=612x612&w=0&k=20&c=-jtXLmexNgRa-eKqA1X8UJ8QYWhW7XgDiWNmzuuCHmM=",
+    name:"Gucci Interlocking G Small Leather Shoulder Bag",
+    price:"$1,890.00 $1,299.9 Save 31%",
+    link:"projectbag.html"
+    },
+    {
+    pic:"https://n.nordstrommedia.com/id/sr3/4e7e78a9-8971-47f7-8eca-5750ea32ced0.jpeg?trim=color&w=350&h=536",
+    name:"Valentino By Mario Valentino Beatriz Diamond Leather Shoulder Bag",
+    price:"$895.0 $319.9 Save 64%",
+    },
+    {
+        pic:"https://img.shopstyle-cdn.com/sim/22/9d/229d4b9dc01bb861372eaf1b8758f994_xlarge/valentino-by-mario-valentino-beatriz-embossed-leather-shoulder-bag.jpg",
+        name:"Valentino By Mario Valentino Beatriz Embossed Leather Shoulder Bag",
+        price:"$895.00 $1699.99 Save 76%",
+
+    },
+]
+     function display(data){
+     data.forEach (function(elem,index){
+        var link = document.createElement("a");
+        link.setAttribute("href", elem.link);
+        link.setAttribute("id", "items");
+
+    var box=document.createElement("div")
+     box.setAttribute("id","items")
+     var box1=document.createElement("div")
+     box1.setAttribute("id","itemsimg")
+
+    var img=document.createElement("img")
+    img.setAttribute("src",elem.pic)
+    // console.log(elem.logo);
+       var h5=document.createElement("h5")
+    h5.innerText=  elem.name
+    h5.setAttribute("class","itemsdetails")
+    var para = document.createElement("p");
+    para.setAttribute("class", "price-details");
+    var priceText = elem.price.split(' ');
+                var originalPrice = priceText[0];
+                var discountedPrice = priceText[1];
+                var savings = priceText.slice(2).join(' '); // Join remaining parts for savings
+
+                // Format the price details
+                para.innerHTML = `<span class="original-price">${originalPrice}</span>
+      <span class="discounted-price">${ discountedPrice }</span>
+  <span class="savings">${ savings }</span>`;
+
+var main = document.getElementById('main');
+  main.appendChild(link);
+//   link.appendChild(box)
+    main.append(box)
+   box.append(box1,h5,para)
+   box1.append(img)
+   link.append(box)
+
+  
+    })
+ }
+display(data)
+
+var details=[
+    { pic:"https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT_cDiQGohuhQQHIay-sOoD7vAlheCtmCsXTFe0IjmKMDUw2kpk3_wDzBMi8IrPiRq68qx9Ejvq6poOOFBFHb9vKfL88XVUMt4Th6apC0iEhYRhwaU728WDo8g&usqp=CAc",
+    name:"HANDBAGS",
+    link:"projectbag.html"
+},
+{
+ pic:"https://ishqme.com/cdn/shop/products/1_3_16deab2f-765a-44e7-b392-95777b412336_640x_crop_center.png?v=1714697618",
+ name:"DREESES",
+ link:"projectbag.html",
+},
+{
+ pic:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQLQAPo_FJVQ5B29uPE-50o8JwQPuB2aLK6LYfpJikf0DhMTk6ErJ6agoUVWERqG6U0zHFONtOfP982lgB8JlDWjMABm-CLE_K8UsDcVwChF1S0cE0InmbaPGAD8G4PhHa478YgBg&usqp=CAc",
+ name:"Pumps & heels",
+ link:"projectbag.html",
+},
+{
+ pic:"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSqzjOp1oyCX4KOH9-6bF_M1-NBIgz_PN2tzvOvphO5kJp-64MCSFVgZBl0KGrhLIK424kUClg_KYm-QsETA7tSqfl6dvpdCaB8U5aSRR4F-dFCLi77BtS9T8CC-O4OwuwBawswbQ&usqp=CAc",
+ name:"sunglasses",
+ link:"projectbag.html"
+},
+{
+ pic:"https://images.meesho.com/images/products/224713294/stz9u_256.webp",
+ name:"women's sneakers",
+ },
+{
+pic:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTHknCmkbuSzZfI3XkcMINKX5hZP1PDSYgWw&s",
+ name:"men's sneakers",
+ link:"projectbag.html",
+},
+{
+ pic:"data:image/jpeg;base64,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",
+ name:"jewellery",
+},
+{
+ pic:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM8HtR3NWxh1D08KcKs5D3HVexAx_C1JWWPg&s",
+ name:"women's top",
+},
+{
+ pic:"https://i.pinimg.com/564x/eb/7e/b6/eb7eb6de33802f1bd4acd3daa750d00c.jpg",
+ name:"men's t-shirt",
+},
+{
+ pic:"https://img3.exportersindia.com/product_images/bc-full/2021/2/6520998/ladies-designer-jeans-1613645112-5728376.jpeg",
+ name:"women's denim ",
+}
+
+]
+
+function shop(details){
+    
+    var bc = document.getElementById("sbc");
+    details.forEach(function(elem){
+         var link = document.createElement("a");
+         link.setAttribute("href", elem.link);
+         link.setAttribute("id", "items");
+
+     var box=document.createElement("div")
+      box.setAttribute("class","sbcitem")
+      var box1=document.createElement("div")
+      box1.setAttribute("id","itemsimg")
+
+     var img=document.createElement("img")
+     img.setAttribute("src",elem.pic);
+     var h5=document.createElement("h5")
+    h5.innerText=  elem.name
+    h5.setAttribute("class","itemsprice")
+  bc.appendChild(link);
+  bc.append(box)
+   box.append(box1,h5)
+   box1.append(img)
+   link.append(box)
+
+  
+    })
+ }
+
+ shop(details)
+   
+
+
+
+</script>
+</html>
