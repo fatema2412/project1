@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+    <title>Document</title>
+    <!-- <style>
+        .frmsp{
+            position: relative;
+            left: 190px;
+            letter-spacing: 0.5px;
+          font-size: 14px;
+          color: rgb(7, 7, 7);
+        }
+        .labelan{
+            text-decoration: none;
+            font-size: 20px;
+            display: grid;
+            text-align: center;
+            margin-top: 5%;
+            color: black;
+        }
+    </style> -->
+</head>
+<body>
+    <div id =header> 
+        <div class="logo">
+            <img alt="logo bluefly" src="https://www.bluefly.com/cdn/shop/files/BLUEFLY-LOGO-11-20.png?v=1613183141">
+        </div>
+        <div class="search">
+            <input type="text" id="search-bar" placeholder="Search for clothing...">
+    </div>
+    <div class="login">
+     <img alt="login" src="https://cdn-icons-png.flaticon.com/128/2321/2321232.png">
+    </div>
+    <div class="whishlist">
+        <img alt="whishlist" src="https://static-00.iconduck.com/assets.00/wishlist-icon-2048x1952-13b2gake.png">
+    </div>
+    <div class="bag">
+    
+    <img alt="shopping bag" src="https://cdn-icons-png.flaticon.com/128/2567/2567829.png">
+    </div>
+    <div id="navbar">
+     <h3><a href="">CLOTHING </a></h3>
+     <h3><a href="">SHOES </a></h3>
+     <h3><a href="projectbag.html">HANDBAGS </a></h3>
+     <h3><a href="">DESNIGER </a></h3>
+     <h3><a href="">SUNGLASSES </a></h3>
+     <h3><a href="">JEWELRY & WATCHES</a></h3>
+     <h3><a href="">UNDER $ 500</a></h3>
+     <h3><a href="">HOME </a></h3>
+    </div>
+    <h3 class="clear">CLEARANCE</h3>
+     </div> 
+    <div id="scrolling-bar">
+            <span>WELCOME TO BLUEFLY: Luxury brands at discount price</span>
+    
+    </div>
+
+ <h1 class="rec" style="font-weight:40px; font-size: 40px;"> LOGIN </h1>  
+ <form id="form">
+    <label class="formlabel" style="letter-spacing:1.5px;"> EMAIL <br>
+        <input id="forminput1" style="width: 410px" type="emai"> <br>
+    </label>
+    <label class="formlabel" style="letter-spacing:1.5px;"> PASSWORD 
+        <span class="frmsp">Forgot password?</span><br>
+        <input id="forminput2" style="width: 410px" type="emai"> <br>
+    </label>
+    <button id="submit" type="submit" style="width: 100%; margin-left: 0px;">SIGN IN </button>
+   <a href="createacc.html" class="labelan">Create account</a>
+ </form>
+ <div id="aboutus">
+    <a href="projectbag.html"  class="about-link">
+<h5  class="about">About US</h5> 
+</a>
+<div class="box-container">
+
+<div class="box1">
+<p>Contact Us</p> 
+<p>Frequently Asked Questions </p>
+<p>Shipping & Return</p>
+<p>Pre-Owned Guide</p>
+<p>Sell on Bluefly</p>
+</div>
+<div class="box1">
+<p>Privacy Policy</p>
+<p>Terms & Conditions </p>
+<p> Do not sell my personal Information </p>
+<p>Shop Pay Installments</p>
+</div>
+<div class="box1">
+<p>Subscribe to get exclusive offers on designer brands</p>
+<input style="width: 400px; height: 40px; text-align: center; font-size: 20px;" placeholder="Enter your email"><br>
+<button class="sub">Subscribe</button> <br>
+<span> <img id="ins" src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png"></span> 
+<span> <img id="fb" src="https://cdn-icons-png.flaticon.com/128/1384/1384005.png"></span>
+
+</div>
+</div>
+<h5  class="signup">SIGN UP AND SAVE</h5>
+
+
+<div class="lastlog">
+<img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/Untitled_2_.png_5_x104@2x.png?v=1620852820" alt="logo">
+<p>© 2022 Bluefly 1998-2020 BLUEFLY.COM OR ITS AFFILIATES ALL RIGHTS RESERVED.</p>  
+</div>
+</div>
+
+</body>
+</html>
+<script>
+    document.querySelector('form').addEventListener('submit', stroe)
+    var siginindet=[];
+    var accdetails= JSON.parse(localStorage.getItem('customerdata'))|| []
+    function stroe(){
+        event.preventDefault();
+    var siginobj={
+        email:form.forminput1.value,
+        password:form.forminput2.value,
+    }
+    siginindet.push(siginobj);
+    var emailExists = false;
+    console.log (accdetails);
+    accdetails.forEach(function (elem){
+        console.log (accdetails);
+       var email =elem.email
+       var password=elem.ps;
+       
+        // })
+        if ((email==siginobj.email) && (password==siginobj.password) )   {
+            emailExists = true;
+        }
+    });
+    if (emailExists) {
+        alert('Welcome to Bluefly!');
+      window.location.href="index.html"
+
+
+  }
+   else{
+
+    alert('Wrong Credentials');
+  }
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.sub').addEventListener('click', function() {
+                console.log("Button clicked");
+                
+                var input = document.getElementById('input').value;
+                if (input.trim() === "") {
+                    console.log("Input is empty");
+                    alert('Please enter your email address');
+                } else {
+                    console.log("Input is filled");
+                    alert('Thank you for subscribing');
+                }
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector("#ins").addEventListener("click", function() {
+                console.log("Instagram icon clicked");
+         window.location.href = "https://www.instagram.com/bluefly/?hl=en";
+            });
+            document.querySelector("#fb").addEventListener("click", function() {
+                console.log("Facebook icon clicked");
+                window.location.href = "https://www.facebook.com/Bluefly/";
+            });
+
+        });
+
+
+
+</script>

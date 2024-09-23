@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Bag Paper</title>
+</head>
+<style>
+    .imgicon{
+        position: fixed; 
+            left: 28%;
+    }
+    .text-container {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+    }
+    .text-box {
+        display: flex;
+        flex-direction: column;
+    }
+    .heading {
+            font-weight: bold;
+            font-size: 15px; 
+            margin-bottom: 10px; /* Space between heading and list */
+            letter-spacing: 0.2em;
+
+        }
+        .list {
+            list-style-type: none; 
+            padding: 0;
+            margin-top: 20px;
+
+        }
+        .list li {
+            margin-bottom: 18px;
+            font-family: Futura,sans-serif;
+            /* letter-spacing: 0.2em;  */
+            font-size: 13px;
+            font-weight: lighter;
+        }
+        .container {
+            display: flex;
+            align-items: flex-start;
+            gap: 130px;
+            position: fixed; 
+            left: 45%;
+
+        }
+        .list a {
+            text-decoration: none; /* Remove underline from links */
+            color: inherit; /* Inherit text color from parent */
+            display: block; /* Make the anchor tag behave like a block element for easier styling */
+        }
+        .list a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+</style>
+<body>
+    <div id =header> 
+        <div class="logo">
+          <a href="index.html">           <img alt="logo bluefly" src="https://www.bluefly.com/cdn/shop/files/BLUEFLY-LOGO-11-20.png?v=1613183141"> </a>
+        </div>
+        <div class="search">
+            <input type="text" id="search-bar" placeholder="Search for clothing...">
+    </div>
+    <div class="login">
+     <img alt="login" src="https://cdn-icons-png.flaticon.com/128/2321/2321232.png">
+    </div>
+    <div class="whishlist">
+        <img alt="whishlist" src="https://static-00.iconduck.com/assets.00/wishlist-icon-2048x1952-13b2gake.png">
+    </div>
+    <div class="bag">
+    
+    <img  class="cartIcon" alt="shopping bag" src="https://cdn-icons-png.flaticon.com/128/2567/2567829.png">
+    </div>
+    <div class="dot" style="margin-left: 1300px ;"></div>
+    <div id="navbar">
+     <h3><a href="projectbag.html">CLOTHING </a></h3>
+     <h3><a href="projectbag.html">SHOES </a></h3>
+     <h3><a href="projectbag.html">HANDBAGS </a></h3>
+     <h3><a href="projectbag.html">DESNIGER </a></h3>
+     <h3><a href="projectbag.html">SUNGLASSES </a></h3>
+     <h3><a href="projectbag.html">JEWELRY & WATCHES</a></h3>
+     <h3><a href="projectbag.html">UNDER $ 500</a></h3>
+    </div>
+    <h3 class="clear">CLEARANCE</h3>
+     </div> 
+     <div class="container">
+
+     <div class="imgicon">
+     <img alt="pageicon" src="https://www.bluefly.com/cdn/shop/files/handbag2.jpg?v=1613619716">
+     <h3>SATCHELS</h3>
+     <p>UP TO 60% OFF</p>
+    </div>
+    <div class="text-box">
+        <div class="heading">ALL HANDBAGS</div>
+        <ul class="list">
+            <li><a href="bagspage.html">SHOP ALL</a></li>
+            <li><a href="bagspage.html">Backpacks</a></li>
+            <li><a href="bagspage.html">Bucket Bags</a></li>
+            <li><a href="bagspage.html">Clutches</a></li>
+            <li><a href="bagspage.html">Crossbody Bags</a></li>
+            <li><a href="bagspage.html">Hobo Bags</a></li>
+            <li><a href="bagspage.html">Satchels</a></li>
+            <li><a href="bagspage.html">Shoulder Bags</a></li>
+            <li><a href="bagspage.html">Tote Bags</a></li>
+            <li><a href="bagspage.html">Travel Bags & Luggage</a></li>
+            <li><a href="bagspage.html">Wallets & Cardholders</a></li>
+
+
+       </ul>
+    </div>
+    <!-- Second Text Box -->
+    <div class="text-box">
+        <div class="heading">TOP DESIGNERS</div>
+        <ul class="list">
+            <li><a href="bagspage.html">SHOP ALL</a></li>
+            <li><a href="bagspage.html">Balenciaga</a></li>
+            <li><a href="bagspage.html">Bottega Veneta</a></li>
+            <li><a href="bagspage.html">Burberry</a></li>
+            <li><a href="bagspage.html">Celine</a></li>
+            <li><a href="bagspage.html">Chloe</a></li>
+            <li><a href="bagspage.html">Dalce & Gabbana </a></li>
+            <li><a href="bagspage.html">Fendi</a></li>
+            <li><a href="bagspage.html">Givenchy</a></li>
+            <li><a href="bagspage.html">Gucci</a></li>
+            <li><a href="bagspage.html">Mario Valentino</a></li>
+            <li><a href="bagspage.html">Prada</a></li>
+            <li><a href="bagspage.html">Saint Laurent</a></li>
+            <li><a href="bagspage.html">Salvatore Ferragamo</a></li>
+            <li><a href="bagspage.html">Stella McCartney</a></li>
+    </ul>
+    </div>
+</div>
+</div>
+<div id="cart-container">
+    <h2 style="font-size: 30px; letter-spacing: 1.5px; font-weight: lighter; margin-left: 5%;">CART
+        <span style="margin-left: 200px; font-size: 20px; margin-top: 30px;" class="cancel">X</span>
+    </h2>
+    <div class="horizontal-line" style="top: 35%;"></div>
+    <div class="cart-item-container"> </div>
+    <div style="width: 100%; border-top: 1px solid black; margin-top: 10px;"></div>
+      
+    
+    
+    <!-- Cart items will be dynamically inserted here -->
+    
+    <div class="cart-summary">
+        <h2 class="subt" style="font-size: 22px;">SUBTOTAL</h2>
+        <p class="displaysub" style="font-size: 22px;">$0.00</p>
+    </div>
+    <p style="letter-spacing: 2; font-size: 20px; color: #838383; margin-top: -2%; margin-left: 2%;" class="shippingpara">Shipping, taxes, and discounts codes calculated at checkout.</p>
+    <button class="checkout" onclick="window.location.href='cart.html';">CHECK OUT</button>   
+    <p class="empty-cart-message">Your cart is empty.</p>
+</div>
+<div id="curtain-overlay"></div>
+  
+</body>
+<script>
+      document.addEventListener('DOMContentLoaded', function() {
+  const cartContainer = document.getElementById('cart-container');
+  const curtainOverlay = document.getElementById('curtain-overlay');
+  const cartItemContainer = document.querySelector('.cart-item-container');
+  const emptyCartMessage = document.querySelector('.empty-cart-message');
+  const subtotalDisplay = document.querySelector('.displaysub');
+  const headingsubt = document.querySelector('.subt');
+  const paraone = document.querySelector('.shippingpara');
+  const cartdot = document.querySelector('.dot');
+  const checkoutButton = document.querySelector('.checkout'); // Ensure this exists
+
+  // Function to update cart display
+  function updateCartDisplay() {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    cartItemContainer.innerHTML = ''; // Clear existing items
+      
+    if (cartItems.length > 0) {
+      cartItems.forEach(item => {
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+        cartItem.dataset.name = item.name; // Set a data attribute for easy access
+
+        cartItem.innerHTML = `
+          <div class="cart-item-image">
+            <img src="${item.imageSrc}" alt="Cart Image">
+          </div>
+          <div class="item-info" style="font-size:15px">
+            <h2>${item.name}</h2>
+            <div class="quantity-controls">
+              <button class="quantity-button" data-action="dec">-</button>
+              <span class="quantity-number">${item.quantity}</span>
+              <button class="quantity-button" data-action="inc">+</button>
+              <p class="price-details">
+                <span class="discount" style="font-size:22px">$${(item.price * item.quantity).toFixed(2)}</span>
+              </p>
+            </div>
+          </div>
+          <hr style="border: 1px solid black; margin: 10px 0;">
+          <div style="border-top: 1px solid black; margin: 10px 0;"></div>
+        `;
+
+        cartItemContainer.appendChild(cartItem);
+      });
+
+      // Update subtotal
+      const subtotal = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+      if (subtotalDisplay) {
+        subtotalDisplay.innerText = `$${subtotal.toFixed(2)}`;
+      }
+
+      if (emptyCartMessage) {
+        emptyCartMessage.style.display = 'none';
+      }
+
+      if (checkoutButton) {
+        checkoutButton.style.display = 'block'; // Show checkout button when cart has items
+      }
+
+      if (headingsubt) {
+        headingsubt.style.display = 'block';
+      }
+
+      if (paraone) {
+        paraone.style.display = 'block';
+      }
+    } else {
+      if (emptyCartMessage) {
+        emptyCartMessage.style.display = 'block';
+      }
+
+      if (subtotalDisplay) {
+        subtotalDisplay.innerText = '';
+      }
+
+      if (checkoutButton) {
+        checkoutButton.style.display = 'none'; // Hide checkout button when cart is empty
+      }
+
+      if (headingsubt) {
+        headingsubt.style.display = 'none';
+      }
+
+      if (paraone) {
+        paraone.style.display = 'none';
+      }
+    }
+
+    if (cartdot) {
+      const isEmpty = emptyCartMessage && window.getComputedStyle(emptyCartMessage).display === 'block';
+      cartdot.style.display = isEmpty ? 'none' : 'block';
+    }
+  }
+
+  // Handle quantity changes
+  if (cartItemContainer) {
+    cartItemContainer.addEventListener('click', function(event) {
+      if (event.target.classList.contains('quantity-button')) {
+        const action = event.target.getAttribute('data-action');
+        const cartItem = event.target.closest('.cart-item');
+        if (!cartItem) return; // Ensure cartItem is found
+
+        const quantityElement = cartItem.querySelector('.quantity-number');
+        const itemName = cartItem.dataset.name;
+        let quantity = parseInt(quantityElement.textContent);
+
+        if (isNaN(quantity)) {
+          console.error('Invalid quantity:', quantity);
+          return;
+        }
+
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const itemIndex = cartItems.findIndex(item => item.name === itemName);
+
+        if (itemIndex === -1) {
+          console.error(`Item with name ${itemName} not found in cartItems.`);
+          return;
+        }
+
+        if (action === 'inc') {
+          quantity++;
+        } else if (action === 'dec') {
+          quantity = Math.max(0, quantity - 1); // Ensure quantity does not go below 0
+          if (quantity === 0) {
+            cartItems.splice(itemIndex, 1); // Remove item if quantity is 0
+            cartItem.remove();
+          }
+        }
+
+        quantityElement.textContent = quantity;
+        if (itemIndex > -1) {
+          if (quantity > 0) {
+            cartItems[itemIndex].quantity = quantity;
+          } else {
+            cartItems.splice(itemIndex, 1);
+          }
+        }
+
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+        // If cart is empty, clear all items and show empty message
+        if (cartItems.length === 0) {
+          localStorage.removeItem('cartItems');
+          updateCartDisplay(); // Update the display to show empty message
+        } else {
+          updateCartDisplay(); // Update the display
+        }
+      }
+    });
+  }
+
+  // Show cart overlay when cart icon is clicked
+  const cartIcon = document.querySelector('.cartIcon');
+  if (cartIcon) {
+    cartIcon.addEventListener('click', function() {
+      curtainOverlay.classList.add('show'); // Show the curtain overlay
+      cartContainer.classList.add('show'); // Show the cart container
+    });
+  }
+
+  // Close cart overlay when curtain or cancel button is clicked
+  if (curtainOverlay) {
+    curtainOverlay.addEventListener('click', function() {
+      curtainOverlay.classList.remove('show');
+      if (cartContainer) cartContainer.classList.remove('show');
+    });
+  }
+
+  const cancelButton = document.querySelector('.cancel');
+  if (cancelButton) {
+    cancelButton.addEventListener('click', function() {
+      curtainOverlay.classList.remove('show');
+      if (cartContainer) cartContainer.classList.remove('show');
+    });
+  }
+
+  // Initialize cart display
+  updateCartDisplay();
+});
+
+   
+</script>
+</html>

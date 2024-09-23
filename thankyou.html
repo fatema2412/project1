@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THANKYOU</title>
+</head>
+<style>
+    .thankdisplaydiv{
+        height: 400px;
+        width: 500px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        margin: auto;
+        padding-top: 20px;
+        text-align: center;
+        letter-spacing: 1.5px;
+    }
+    .logo{
+    display: flex;
+justify-content: center; 
+}
+#header{
+        width: 100%;
+    /* position: sticky; */
+top: 0;
+height:100px;
+background: #fff; /* Background color to ensure it stands out */
+z-index: 1000; /* Ensure it stays on top of other content */
+}
+.ty{
+    font-size: 23px;
+    font-weight: lighter;
+    /* line-height: 100px; */
+}
+.continue{
+    width: 400px;
+    height: 50px;
+    /* background-color: black; */
+    color: white;
+    position: cursor;
+    margin-top: 3%;
+    font-size: 15px;
+}
+
+</style>
+<body>
+    <div id =header> 
+        <div class="logo">
+            <img alt="logo bluefly" src="https://www.bluefly.com/cdn/shop/files/BLUEFLY-LOGO-11-20.png?v=1613183141">
+        </div>
+      </div>
+    
+    <div class="thankdisplaydiv">
+  <h3>Payment Successful !</h3>
+  <h2 class="ty">Thankyou for shopping with BLUEFLY 
+</h2>
+<button class="continue"     onclick=window.location.href="index.html">Continue Shopping</button>
+    </div>
+</body>
+</html>
